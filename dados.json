@@ -1,0 +1,20 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome_est": "324",
+      "email": "Vittor.Trigone.Dias@gmail.com",
+      "cpf": "467.804.958-40",
+      "endereco": "345"
+    }
+  ],
+  "professores": [
+    {
+      "id": 1,
+      "nome_est": "wdqwqdqwd",
+      "email": "Vittor.Trigone.Dias@gmail.com",
+      "cpf": "467.804.958-40",
+      "endereco": "345"
+    }
+  ]
+}

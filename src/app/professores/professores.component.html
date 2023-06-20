@@ -1,0 +1,33 @@
+{{ Professor | json}}
+
+<div class="p-3 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="container max-w-500 bg-light rounded shadow-lg ">
+      <app-professores-forms [Professor]="Professor" (saveEvent)="onSaveEvent($event)"
+        (cleanEvent)="onCleanEvent()"></app-professores-forms>
+      <table class="table table-light mt-3">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let professor of Professores">
+            <th scope="row">{{professor.id}}</th>
+            <td>{{professor.nome_est}}</td>
+            <td>{{professor.email}}</td>
+            <td>{{professor.cpf}}</td>
+            <td>{{professor.endereco}}</td>
+            <td>
+              <button class="btn btn-outline-primary me-2" (click)="edit(professor)">Editar</button>
+              <button class="btn btn-outline-danger" (click)="delete(professor)">Deletar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,33 @@
+{{ Aluno | json}}
+
+<div class="p-3 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="container max-w-500 bg-light rounded shadow-lg ">
+      <app-alunos-forms [Aluno]="Aluno" (saveEvent)="onSaveEvent($event)"
+        (cleanEvent)="onCleanEvent()"></app-alunos-forms>
+      <table class="table table-light mt-3">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let aluno of Alunos">
+            <th scope="row">{{aluno.id}}</th>
+            <td>{{aluno.nome_est}}</td>
+            <td>{{aluno.email}}</td>
+            <td>{{aluno.cpf}}</td>
+            <td>{{aluno.endereco}}</td>
+            <td>
+              <button class="btn btn-outline-primary me-2" (click)="edit(aluno)">Editar</button>
+              <button class="btn btn-outline-danger" (click)="delete(aluno)">Deletar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
