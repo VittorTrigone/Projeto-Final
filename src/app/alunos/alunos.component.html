@@ -1,9 +1,7 @@
-{{ Aluno | json}}
+<button class="btn btn-outline-warning" (click)="create()">Novo Aluno</button>
 
 <div class="p-3 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
     <div class="container max-w-500 bg-light rounded shadow-lg ">
-      <app-alunos-forms [Aluno]="Aluno" (saveEvent)="onSaveEvent($event)"
-        (cleanEvent)="onCleanEvent()"></app-alunos-forms>
       <table class="table table-light mt-3">
         <thead>
           <tr>

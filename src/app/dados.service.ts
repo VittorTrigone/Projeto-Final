@@ -47,4 +47,9 @@ export class DadosService {
     return this.http.delete<void>(`${this.url}/professores/${professor.id}`);
   }
 
+
+  getDetails(id: number): Observable<Aluno>{
+    return this.http.get<Aluno>(`${this.url}/alunos/${id}`);
+  }
+
 }

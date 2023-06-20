@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DadosService } from '../dados.service';
 import { Aluno } from '../aluno';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alunos',
@@ -9,10 +10,11 @@ import { Aluno } from '../aluno';
 })
 export class AlunosComponent {
   Alunos: Aluno[] = [];
-  Aluno: Aluno = {} as Aluno;
-  isEditing: boolean = false;
 
-  constructor(private DadosService: DadosService) { }
+  constructor(
+    private DadosService: DadosService,
+    private router : Router
+    ) { }
 
   ngOnInit(): void {
     this.loadAlunos();
@@ -24,30 +26,12 @@ export class AlunosComponent {
     });
   }
 
-  onCleanEvent() {
-    this.isEditing = false;
-  }
-
-  onSaveEvent(Aluno: Aluno) {
-    if (this.isEditing) {
-      this.DadosService.updateAluno(Aluno).subscribe({
-        next: () => {
-          this.loadAlunos();
-          this.isEditing = false;
-        },
-      });
-    } else {
-      this.DadosService.saveAluno(Aluno).subscribe({
-        next: (data) => {
-          this.Alunos.push(data);
-        },
-      });
-    }
+  create() {
+    this.router.navigate(['alunosCreate'])
   }
 
   edit(Aluno: Aluno) {
-    this.Aluno = Aluno;
-    this.isEditing = true;
+    this.router.navigate(['alunosDetails', Aluno.id])
   }
 
   delete(Aluno: Aluno) {
