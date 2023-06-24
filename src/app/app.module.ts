@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { TermosPipe } from './termos.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     AlunosFormsComponent,
     HomeComponent,
     HeaderComponent,
+    TermosPipe,
   ],
   imports: [
     BrowserModule,

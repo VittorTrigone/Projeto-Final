@@ -4,4 +4,5 @@ export interface Professor {
     email: string;
     endereco: string;
     cpf: string;
+    termos: boolean;
 }

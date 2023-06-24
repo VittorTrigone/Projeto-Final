@@ -29,6 +29,22 @@
       "email": "vittor.trigone.dias@gmail.com",
       "cpf": "467.804.958-40",
       "endereco": "234"
+    },
+    {
+      "id": 3,
+      "nome_est": "324",
+      "email": "Vittor.Trigone.Dias@gmail.com",
+      "cpf": "467.804.958-40",
+      "endereco": "324",
+      "termos": true
+    },
+    {
+      "id": 4,
+      "nome_est": "324",
+      "email": "Vi.Trigone@gmail.com",
+      "cpf": "467.804.958-40",
+      "endereco": "234",
+      "termos": null
     }
   ]
 }

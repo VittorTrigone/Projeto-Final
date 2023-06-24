@@ -21,6 +21,7 @@ export class ProfessoresFormsComponent implements OnChanges {
       email: ['', [Validators.required, Validators.email]],
       cpf: ['', [Validators.required]],
       endereco: ['', [Validators.required]],
+      termos: ['']
     });
   }
 

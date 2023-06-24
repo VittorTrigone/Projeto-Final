@@ -4,10 +4,8 @@ import { AlunosComponent } from './alunos/alunos.component';
 import { AlunosFormsComponent } from './alunos-forms/alunos-forms.component';
 import { ProfessoresComponent } from './professores/professores.component';
 import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
-  {path : '', component: HeaderComponent},
   {path : 'home', component: HomeComponent},
   {path : 'alunos', component: AlunosComponent},
   {path : 'alunosDetails/:id', component: AlunosFormsComponent},

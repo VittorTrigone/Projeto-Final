@@ -25,12 +25,18 @@
             <small class="text-danger">Endereço Inválido!</small>
           </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-4">
           <label for="cpf" class="form-label text-dark">CPF</label>
           <input type="text" formControlName="cpf" class="form-control" id="cpf" placeholder="Digite seu CPF">
           <div *ngIf="submitted && cpf.invalid">
             <small class="text-danger">CPF Inválido!</small>
           </div>
+        </div>
+        <div class="form-check mb-3">
+          <input formControlName="termos" class="form-check-input" type="checkbox" id="termos">
+          <label for="termos" class="form-check-label" for="flexCheckDefault">
+            Concorda com os termos?
+          </label>
         </div>
         <div>
           <button class="btn btn-outline-success m-3" (click)="save()">Salvar</button>
